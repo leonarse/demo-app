@@ -46,12 +46,27 @@
 		<div class="container">
     		<div class="blurb">
         		<h1>Hello world</h1>
+			<button style="font-size: x-large;padding: 5px;" onclick="jsError1()">Generate Common JS Error</button>
+      <button style="font-size: x-large;padding: 5px;" onclick="jsError2()">Generate Page Specific JS Error</button>
+      <button style="font-size: x-large;padding: 5px;" onclick="httpError()">Generate HTTP Error</button>
     		</div>
 		</div>
+		
 		<footer>
     		<ul>
         		<li><a id="email" href="mailto:patric.k.sun692@gmail.com">email</a></li>
 			</ul>
 		</footer>
+	 <script>
+		function jsError1() {
+			throw "JS Error 1";
+		}
+    function jsError2() {
+			throw "Page1 page error";
+		}
+		function httpError() {
+			fetch("https://ww.nyksdfs.com");
+		}
+	</script>
 	</body>
 </html>
